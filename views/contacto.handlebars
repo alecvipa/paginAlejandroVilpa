@@ -1,0 +1,61 @@
+<div class="contactoDiv"> <br>
+    <div class="container centered titleSiguenos colorSieteTeal">
+        <div class="row">
+
+            <h3>Haz tu pedido</h3>
+            <p style="font-style: italic; font-size: 1.5rem">Prueba la sensasión golosa de nuestro espíritu siete lunas
+            </p>
+
+        </div>
+        <div class="row">
+            <form class="col s12" action="/ajax/email" method="POST" onsubmit="return submitEmailForm(this);">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input name="name" placeholder="Nombre" id="first_name" type="text" class="validate formInput"
+                            required="" aria-required="true">
+                        <label for="first_name">Nombre completo</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input name="email" id="email" type="text" class="validate formInput" required=""
+                            aria-required="true">
+                        <label for="email">Correo electrónico</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="message" id="input_text" type="text" data-length="10" required=""
+                            aria-required="true" class="formInput">
+                        <label for="input_text">Mensaje</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" required="" aria-required="true" />
+                        <span>Acepto <a href="/privacidad">aviso de privacidad</a></span>
+                    </label>
+                </div>
+                <button class="btn waves-effect waves-light">Enviar
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="opcionComprar">
+        <div class="container">
+            <div class="row centered titleSiguenos colorSieteTeal">
+                <h4>También puedes encontrarnos en:</h4>
+            </div>
+            <div class="row">
+                <div class="col l4 m4 s6">
+                    <img class="responsive-img" src="/assets/images/laShula.jpg">
+                </div>
+                <div class="col l4 m4 s6">
+                    <img class="responsive-img" src="/assets/images/argentalia.jpg">
+                </div>
+                <div class="col l4 m4 s6">
+                    <img class="responsive-img" src="/assets/images/pisoCuatro.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

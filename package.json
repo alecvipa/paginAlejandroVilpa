@@ -1,0 +1,26 @@
+{
+  "name": "paginalejandrovilpa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alecvipa/paginAlejandroVilpa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alecvipa/paginAlejandroVilpa/issues"
+  },
+  "homepage": "https://github.com/alecvipa/paginAlejandroVilpa#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "materialize-css": "^1.0.0",
+    "nodemailer": "^6.7.2"
+  }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <meta name="description" content="Escritor de novela de crimen">
+    <meta name="keywords"
+        content="Impresión, vinil, backlite, Publicidad impresa, Medios impresos, Stoppers, espectaculares, Valla publicitarias, Material pop, Banners, Lonas, Viniles, Imprenta, Cenefa, Mupi, Posters, Danglers, Standees, Mantas, Faldones, Signs, Anuncios espectaculares, Anuncios impresos, Precio de espectaculares, Medios masivos">
+    <link rel="shortcut icon" href="assets/images/logo2.jpeg">
+    <script src="https://kit.fontawesome.com/a077a0470e.js" crossorigin="anonymous"></script>
+    <title>Alejandro Vilpa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans:ital,wght@1,600&family=Nunito+Sans:wght@200&family=Work+Sans:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- Lato Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Stylesheet -->
+    <link href="/assets/css/gallery-materialize.min.css" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/materialize.min.css" rel="stylesheet">
+    <link href="/assets/css/gallery-materialize.css" rel="stylesheet">
+
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+        });
+    </script>
+    <script>
+        function submitEmailForm(form) {
+
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value }));
+            alert("¡En breve te contactaremos!");
+            $(".formInput").val(" ");
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="white navDiv fonts" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo"><img src="/assets/images/logo.jpeg" alt="logoIdm"
+                    class="imageLogo"></a>
+            <ul class="right hide-on-med-and-down navUl">
+                <li><a href="/" class="navItems">Inicio</a></li>
+                <li><a href="/contacto" class="navItems">Donde comprar</a></li>
+                <li><a href="/recetas" class="navItems">Recetas</a></li>
+                <li><a href="/privacidad" class="navItems">Aviso de privacidad</a></li>
+                <li><a href="https://www.facebook.com/Mezcal-Siete-Lunas-102069484938577" class="navItems"
+                        target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/mezcal_sietelunas/?hl=es" class="navItems" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="/privacidad" class="navItems"><i class="fab fa-whatsapp-square"></i></a></li>
+            </ul>
+
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a class="sidenav-close" href="#!"><i class="material-icons" style="color: #73B598;">menu</i></a>
+                </li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/contacto" class="navItems">Donde comprar</a></li>
+                <li><a href="/recetas" class="navItems">Recetas</a></li>
+                <li><a href="/privacidad">Aviso de privacidad</a></li>
+                <li><a href="https://www.facebook.com/Mezcal-Siete-Lunas-102069484938577" class="navItems"
+                        target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/mezcal_sietelunas/?hl=es" class="navItems" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="/privacidad" class="navItems"><i class="fab fa-whatsapp-square"></i></a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="bodyPrincipal fonts">
+        {{{body}}}
+    </div>
+    <footer class="page-footer footerMezcal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Mezcal 7 Lunas</h5>
+                    <p class="grey-text text-lighten-4">Mezcal joven y presentación especial de arte huichol.
+                    </p>
+
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Mapa de sitio</h5>
+                    <ul>
+                        <li><a class="white-text" href="/inicio">Inicio</a></li>
+                        <li><a class="white-text" href="/contacto">Donde Comprar</a></li>
+                        <li><a class="white-text" href="/recetas">Recetas</a></li>
+                        <li><a class="white-text" href="/privacidad">Aviso de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container centered">
+                Copyright © <a href="/" style="color: lightgrey;">2022 Mezcal 7 Lunas - Todos los derechos
+                    reservados.</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Core Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/masonry.pkgd.min.js"></script>
+    <script src="/assets/js/materialize.min.js"></script>
+    <script src="/assets/js/color-thief.min.js"></script>
+    <script src="/assets/js/galleryExpand.js"></script>
+    <script src="/assets/js/init.js"></script>
+
+</body>
+
+</html>
