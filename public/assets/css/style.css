@@ -5,6 +5,9 @@ nav {
 .navItems{
     color: black !important;
 }
+.material-icons{
+    color: black !important;
+}
 .imageInicio{
     height: 46rem;
     background-image: url("/assets/images/bannerInicio.jpg");
@@ -49,7 +52,7 @@ nav {
     margin-top: 3%;
 }
 .overlayParallax{
-    background-color: rgba(0, 0, 0, 0.411);
+    background-color: rgba(0, 0, 0, 0.514);
     height: 100%;
     width: 100%;
     padding-top: 10%;
@@ -103,6 +106,9 @@ p {
 .sidenav-overlay{
     display: none !important;
 }
+.parallax-container{
+    min-width: 350px !important;
+}
 
 
 @media only screen and (min-width : 992px) {
@@ -111,6 +117,7 @@ p {
     }
 }
 @media only screen and (max-width : 992px) {
+    
     .gallery-bodies{
         margin-top: 320px !important;
     }
@@ -126,6 +133,7 @@ p {
     
     .imageInicio{
         height: 41rem;
+        background-image: url("/assets/images/bannerStory.jpg");
     }
     .parallax-container .section {
       position: absolute;
