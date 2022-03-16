@@ -43,14 +43,13 @@ nav {
     font-family: 'Nunito Sans', sans-serif;
     font-family: 'Work Sans', sans-seri
 }
-.footerMezcal{
-    background-color: #ADAC73 !important;
-}
+
 .contInicioNosotros{
     background-color: white;
     padding-top: 3%;
     margin-top: 3%;
 }
+
 .overlayParallax{
     background-color: rgba(0, 0, 0, 0.514);
     height: 100%;
@@ -117,6 +116,9 @@ p {
     }
 }
 @media only screen and (max-width : 992px) {
+    .margin-top-7{
+        margin-top: 7%;
+    }
     
     .gallery-bodies{
         margin-top: 320px !important;
