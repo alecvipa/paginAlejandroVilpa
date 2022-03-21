@@ -1,0 +1,95 @@
+<div class="clubDiv">
+    <div class="container">
+        <div class="row t">
+            <h1>
+                —Únete al club.
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col l6 m6 s12">
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h4>Beneficios:</h4>
+                    </li>
+                    <li class="collection-item">
+                        <div>Tendrás descuentos exclusivos en mi tienda</div>
+                    </li>
+                    <li class="collection-item">
+                        <div>Conocerás las novedades y leerás textos inéditos antes que nadie</div>
+                    </li>
+                    <li class="collection-item">
+                        <div>Tendrás prioridad en sorteos y grupos de lectura</div>
+                    </li>
+                    <li class="collection-item">
+                        <div>¿Eres artista?, ¡colaboremos!</div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="contactoDiv"> <br>
+        <div class="container titleSiguenos">
+            <div class="row">
+
+                <h3>Forma parte de una comunidad.</h3>
+                <p style="font-style: italic; font-size: 1.5rem">Comparte conmigo tu pasión por la literatura...
+                </p>
+
+            </div>
+            <div class="row">
+                <form class="col s12" action="/club/email" method="POST" onsubmit="return submitClubForm(this);">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input name="nameClub" placeholder="Nombre" id="first_name" type="text"
+                                class="validate formInput" required="" aria-required="true">
+                            <label for="first_name">Nombre completo</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input name="emailClub" id="email" type="text" class="validate formInput" required=""
+                                aria-required="true">
+                            <label for="email">Correo electrónico</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="countryClub" id="input_text" type="text" data-length="10" required=""
+                                aria-required="true" class="formInput">
+                            <label for="input_text">País de residencia</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label>
+                            <input type="checkbox" required="" aria-required="true" />
+                            <span>Acepto <a href="/privacidad">aviso de privacidad</a></span>
+                        </label>
+                    </div>
+                    <button class="btn waves-effect waves-light #212121 grey darken-4">Registrarme
+                        <i class="material-icons right" style="color: white !important;">send</i>
+                    </button>
+                </form>
+            </div>
+        </div> <br>
+
+        <div class="opcionComprar">
+            <div class="container">
+                <div class="row centered titleSiguenos">
+                    <h4>Te invito a ver los productos destacados de mi tienda:</h4>
+                </div>
+                <div class="row">
+                    <div class="col l4 m4 s6">
+                        <img class="responsive-img" src="/assets/images/laShula.jpg">
+                    </div>
+                    <div class="col l4 m4 s6">
+                        <img class="responsive-img" src="/assets/images/argentalia.jpg">
+                    </div>
+                    <div class="col l4 m4 s6">
+                        <img class="responsive-img" src="/assets/images/pisoCuatro.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>

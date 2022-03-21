@@ -59,11 +59,43 @@ app.post("/ajax/email", function (request, response) {
     });
 
     var textBody = `FROM: ${request.body.name}; EMAIL: ${request.body.email}; MESSAGE: ${request.body.message}`;
-    var htmlBody = `<h2>Correo de contacto</h2><p>Nombre: ${request.body.name} </p> <p> Correo electrónico: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Mensaje:${request.body.message} </p>`;
+    var htmlBody = `<h2>Correo de contacto</h2><p>Nombre: ${request.body.name} </p> <p> Correo electrónico: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Mensaje: ${request.body.message} </p>`;
     var mail = {
         from: '"Team: Xyncs Web Studio',
-        to: 'ventas@mezcalsietelunas.com',
-        subject: '¡Alguien ha dejado sus datos en Mezcal 7 Lunas!',
+        to: 'hebrit_626@hotmail.com',
+        subject: '¡Alguien ha llenado el formulario de contacto, Alejandro Vilpa!',
+        html: htmlBody
+    };
+    transporter.sendMail(mail, function (err, info) {
+        if (err) {
+            return console.log(err);
+        } else {
+            console.log("message sent!");
+        };
+    });
+});
+
+app.post("/club/email", function (request, response) {
+    console.log(email);
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        secure: false,
+        port: 25,
+        auth: {
+            user: email,
+            pass: superSecretPwd
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
+    });
+
+    var textBody = `FROM: ${request.body.name}; EMAIL: ${request.body.email}; MESSAGE: ${request.body.message}`;
+    var htmlBody = `<h2>Correo de contacto</h2><p>Nombre: ${request.body.name} </p> <p> Correo electrónico: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>País: ${request.body.country} </p>`;
+    var mail = {
+        from: '"Team: Xyncs Web Studio',
+        to: 'hebrit_626@hotmail.com',
+        subject: '¡Alguien se registró en tu club, Alejandro Vilpa!',
         html: htmlBody
     };
     transporter.sendMail(mail, function (err, info) {

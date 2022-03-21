@@ -54,7 +54,30 @@
             obj.open("post", form.action, true);
             obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
             obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value }));
-            alert("¡En breve te contactaremos!");
+            alert("¡Mensaje enviado con éxito!");
+            $(".formInput").val(" ");
+            return false;
+        }
+    </script>
+    <script>
+        function submitClubForm(form) {
+
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.nameClub.value, email: form.emailClub.value, country: form.countryClub.value }));
+            alert("¡Bienvenido a la comunidad. Tu registro ha sido hecho con éxito!");
             $(".formInput").val(" ");
             return false;
         }
@@ -78,8 +101,7 @@
             <ul class="right hide-on-med-and-down navUl">
                 <li><a href="/" class="navItems">Inicio</a></li>
                 <li><a href="/mihistoria" class="navItems">Mi historia</a></li>
-                <li><a class="dropdown-trigger black-text" href="/tienda" data-target="dropdown1">Tienda<i
-                            class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="/tienda" class="navItems">Tienda</a></li>
                 <li><a href="/club" class="navItems">Club</a></li>
                 <li><a href="/contacto" class="navItems">Contacto</a></li>
                 <li><a href="/privacidad" class="navItems">Aviso de privacidad</a></li>
@@ -96,8 +118,7 @@
                 </li>
                 <li><a href="/" class="navItems">Inicio</a></li>
                 <li><a href="/mihistoria" class="navItems">Mi historia</a></li>
-                <li><a class="dropdown-trigger black-text" href="/tienda" data-target="dropdown1">Tienda<i
-                            class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="/tienda" class="navItems">Tienda</a></li>
                 <li><a href="/club" class="navItems">Club</a></li>
                 <li><a href="/contacto" class="navItems">Contacto</a></li>
                 <li><a href="/privacidad" class="navItems">Aviso de privacidad</a></li>
