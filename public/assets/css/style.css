@@ -16,6 +16,14 @@ nav {
     background-size: cover;
     margin-bottom: 3%;
 }
+.imageGracias{
+    height: 35rem;
+    background-image: url("/assets/images/neoNoir.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3%;
+}
 .bannerPrivacidad{
     background-image: url("/assets/images/sal.jpg");
     background-position: center;
@@ -110,12 +118,16 @@ p {
 }
 
 
+
 @media only screen and (min-width : 992px) {
     .navUl{
         padding-top: 3%;
     }
 }
 @media only screen and (max-width : 992px) {
+    .imageGracias{
+        height: 17rem;
+    }
     .margin-top-7{
         margin-top: 7%;
     }
@@ -137,6 +149,7 @@ p {
         height: 41rem;
         background-image: url("/assets/images/bannerStory.jpg");
     }
+    
     .parallax-container .section {
       position: absolute;
       top: 40%;
