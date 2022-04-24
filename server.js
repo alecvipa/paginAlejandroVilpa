@@ -25,14 +25,14 @@ app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Redirect to https://xyncs.com
-// const targetBaseUrl = 'https://www.alejandrovilpa.com/inicio';
+const targetBaseUrl = 'https://www.alejandrovilpa.com/inicio';
 
 
 
 // Routes
 app.get('/', function (req, res) {
-    // res.redirect(targetBaseUrl);
-    res.render('inicio')
+    res.redirect(targetBaseUrl);
+    // res.render('inicio')
 
 });
 app.get('/:params?', function (req, res) {
