@@ -25,7 +25,7 @@ app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Redirect to https://xyncs.com
-// const targetBaseUrl = 'https://www.idm-serag.com/inicio';
+// const targetBaseUrl = 'https://www.alejandrovilpa.com/inicio';
 
 
 
