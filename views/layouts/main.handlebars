@@ -36,6 +36,7 @@
             var instances = M.Carousel.init(elems, options);
         });
     </script>
+
     <script>
         function submitEmailForm(form) {
 
@@ -82,6 +83,30 @@
             return false;
         }
     </script>
+    <script>
+        function submitSmirnovForm(form) {
+
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.nameSmirnov.value, email: form.emailSmirnov.value, country: form.countrySmirnov.value, zipCode: form.zipSmirnov.value, phoneNumber: form.phoneSmirnov.value, dedica: form.dedicaSmirnov.value, address: form.addreSmirnov.value }));
+            alert("¡Tu copia de La otra vida de Rebecca Smirnov, está en camino!");
+            $(".formInput").val(" ");
+             window.location.href = "https://www.alejandrovilpa.com/gracias";
+            return false;
+        }
+    </script>
 </head>
 
 <body>
@@ -94,17 +119,17 @@
         <li><a href="#!" class="black-text">Regalos</a></li>
         <li class="divider"></li>
     </ul>
-    <nav class="white navDiv fonts" role="navigation">
+    <nav class="white navDiv fonts" role="navigation" >
         <div class="nav-wrapper container">
             <a id="logo-container" href="/" class="brand-logo"><img src="/assets/images/logo1.png" alt="logoIdm"
                     class="imageLogo"></a>
             <ul class="right hide-on-med-and-down navUl">
-                <li><a href="/" class="navItems">Inicio</a></li>
-                <li><a href="/mihistoria" class="navItems">Mi historia</a></li>
-                <li><a href="/tienda" class="navItems">Tienda</a></li>
-                <li><a href="/club" class="navItems">Club</a></li>
-                <li><a href="/contacto" class="navItems">Contacto</a></li>
-                <li><a href="/privacidad" class="navItems">Aviso de privacidad</a></li>
+                <li><a href="/" class="navItems navBarD">Inicio</a></li>
+                <li><a href="/mihistoria" class="navItems navBarD">Mi historia</a></li>
+                <li><a href="/tienda" class="navItems navBarD">Tienda</a></li>
+                <li><a href="/club" class="navItems navBarD">Club</a></li>
+                <li><a href="/contacto" class="navItems navBarD">Contacto</a></li>
+                <li><a href="/privacidad" class="navItems navBarD">Aviso de privacidad</a></li>
                 <li><a href="https://web.facebook.com/alejandrovilpa?_rdc=1&_rdr" class="navItems" target="_blank"><i
                             class="fab fa-facebook"></i></a></li>
                 <li><a href="https://www.instagram.com/alejandrovilpa/?hl=es" class="navItems" target="_blank"><i
@@ -116,12 +141,12 @@
             <ul id="nav-mobile" class="sidenav">
                 <li><a class="sidenav-close" href="#!"><i class="material-icons" style="color: black;">menu</i></a>
                 </li>
-                <li><a href="/" class="navItems">Inicio</a></li>
-                <li><a href="/mihistoria" class="navItems">Mi historia</a></li>
-                <li><a href="/tienda" class="navItems">Tienda</a></li>
-                <li><a href="/club" class="navItems">Club</a></li>
-                <li><a href="/contacto" class="navItems">Contacto</a></li>
-                <li><a href="/privacidad" class="navItems">Aviso de privacidad</a></li>
+                <li><a href="/" class="navItems navBarD">Inicio</a></li>
+                <li><a href="/mihistoria" class="navItems navBarD">Mi historia</a></li>
+                <li><a href="/tienda" class="navItems navBarD">Tienda</a></li>
+                <li><a href="/club" class="navItems navBarD">Club</a></li>
+                <li><a href="/contacto" class="navItems navBarD">Contacto</a></li>
+                <li><a href="/privacidad" class="navItems navBarD">Aviso de privacidad</a></li>
                 <li><a href="https://web.facebook.com/alejandrovilpa?_rdc=1&_rdr" class="navItems" target="_blank"><i
                             class="fab fa-facebook"></i></a></li>
                 <li><a href="https://www.instagram.com/alejandrovilpa/?hl=es" class="navItems" target="_blank"><i
@@ -145,12 +170,12 @@
 
                 </div>
                 <div class="col l3 s12">
-                    <h5 class="white-text">Mapa de sitio</h5>
+                    <h5 class="white-text navBarD">Mapa de sitio</h5>
                     <ul>
-                        <li><a href="/" class="white-text">Inicio</a></li>
-                        <li><a href="/tienda" class="white-text">Tienda</a></li>
-                        <li><a href="/club" class="white-text">Club</a></li>
-                        <li><a href="/privacidad" class="white-text">Aviso de privacidad</a></li>
+                        <li><a href="/" class="white-text navBarD">Inicio</a></li>
+                        <li><a href="/tienda" class="white-text navBarD">Tienda</a></li>
+                        <li><a href="/club" class="white-text navBarD">Club</a></li>
+                        <li><a href="/privacidad" class="white-text navBarD">Aviso de privacidad</a></li>
                     </ul>
                 </div>
             </div>
@@ -172,6 +197,7 @@
     <script src="/assets/js/color-thief.min.js"></script>
     <script src="/assets/js/galleryExpand.js"></script>
     <script src="/assets/js/init.js"></script>
+     <script src="/assets/js/script.js"></script>
     <script>
         $(document).ready(function () {
             $('.slider').slider({ full_width: true });
