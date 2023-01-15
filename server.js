@@ -155,6 +155,52 @@ app.post("/rebeccasmirnovenvio", function (request, response) {
         };
     })
 });
+app.post("/inocentesenvio", function (request, response) {
+    console.log(email);
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        secure: false,
+        port: 25,
+        auth: {
+            user: email,
+            pass: superSecretPwd
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
+    });
+
+    var textBody = `FROM: ${request.body.name}; EMAIL: ${request.body.email}; MESSAGE: ${request.body.message}`;
+    var htmlBody = `<h2>Correo de contacto</h2><p>Nombre: ${request.body.name} </p> <p> Correo electrónico: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>País: ${request.body.country} </p><p>Código Postal: ${request.body.zipCode}</p><p>Teléfono: ${request.body.phoneNumber}</p><p>Dedicado a: ${request.body.dedica}</p><p>Dirección: ${request.body.address}</p>`;
+    var secondHtmlBody = `<h2>Gracias por adquirir tu copia de: El aliento de los inocentes</h2><p>${request.body.name} Tu copia será enviada, en breve, a la dirección de entrega que proporcionaste</p>`;
+    let customerMail = `${request.body.email}`;
+    var mail = {
+        from: '"Team: Xyncs Web Studio',
+        to: 'hebrit_626@hotmail.com',
+        subject: '¡Nuevo pedido: El aliento de los inocentes!',
+        html: htmlBody
+    };
+    var secondMail = {
+        from: 'Alejandro Vilpa',
+        to: customerMail,
+        subject: '¡Tu copia: El aliento de los inocentes!',
+        html: secondHtmlBody
+    };
+    transporter.sendMail(mail, function (err, info) {
+        if (err) {
+            return console.log(err);
+        } else {
+            console.log("message sent!");
+        };
+    });
+    transporter.sendMail(secondMail, function (err, info) {
+        if (err) {
+            return console.log(err);
+        } else {
+            console.log("message sent!");
+        };
+    })
+});
 
 //STRIPE
 app.post('/create-checkout-session', async (req, res) => {
@@ -168,6 +214,22 @@ app.post('/create-checkout-session', async (req, res) => {
         ],
         mode: 'payment',
         success_url: `${"https://www.alejandrovilpa.com"}/resumenrebeccaSmirnov`,
+        cancel_url: `${"https://www.alejandrovilpa.com"}/inicio`,
+    });
+
+    res.redirect(303, session.url);
+});
+app.post('/create-checkout-session-inocentes', async (req, res) => {
+    const session = await stripe.checkout.sessions.create({
+        line_items: [
+            {
+                // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+                price: 'price_1MQc6VGyOvmlXVnJBOMB2c8m',
+                quantity: 1,
+            },
+        ],
+        mode: 'payment',
+        success_url: `${"https://www.alejandrovilpa.com"}/resumenElAlientoDeLosInocentes`,
         cancel_url: `${"https://www.alejandrovilpa.com"}/inicio`,
     });
 

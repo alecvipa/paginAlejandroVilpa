@@ -107,6 +107,30 @@
             return false;
         }
     </script>
+    <script>
+        function submitInocentesForm(form) {
+
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.nameInocentes.value, email: form.emailInocentes.value, country: form.countryInocentes.value, zipCode: form.zipInocentes.value, phoneNumber: form.phoneInocentes.value, dedica: form.dedicaInocentes.value, address: form.addreInocentes.value }));
+            alert("¡Tu copia de 'El aliento de los inocentes', está en camino!");
+            $(".formInput").val(" ");
+             window.location.href = "https://www.alejandrovilpa.com/gracias";
+            return false;
+        }
+    </script>
 </head>
 
 <body>

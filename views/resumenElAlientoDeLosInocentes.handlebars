@@ -1,0 +1,82 @@
+<div class="resumenAlientoInocentes">
+    <br> <br> <br>
+    <div class="container">
+        <div class="row">
+            <div class="col l6 m6 s12">
+                <ul class="collection with-header">
+                    <li class="collection-header center-align">
+                        <h4>¡Gracias por tu pedido!</h4><hr><h5>El Aliento de los Inocentes</h5>
+                    </li>
+                    <hr>
+                    <li class="collection-header center-align">
+                        <h5>Compártenos tus datos de envío</h5>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="col l6 m6 s12">
+                <form class="col s12" action="/inocentesenvio" method="POST" onsubmit="return submitInocentesForm(this);">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input name="nameInocentes" placeholder="Nombre" id="first_name" type="text"
+                                class="validate formInput" required="" aria-required="true">
+                            <label for="first_name">Nombre completo</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input name="emailInocentes" id="email" type="text" class="validate formInput" required=""
+                                aria-required="true">
+                            <label for="email">Correo electrónico</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input name="countryInocentes" id="input_text" type="text" data-length="10" required=""
+                                aria-required="true" class="formInput">
+                            <label for="input_text">País de residencia</label>
+                        </div>
+                         <div class="input-field col s6">
+                            <input name="zipInocentes" id="input_text" type="text" data-length="10" required=""
+                                aria-required="true" class="formInput">
+                            <label for="input_text">Código postal</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="phoneInocentes" id="input_text" type="text" data-length="10" required=""
+                                aria-required="true" class="formInput">
+                            <label for="input_text">Número de contacto</label>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="dedicaInocentes" id="input_text" type="text" data-length="10" 
+                                aria-required="true" class="formInput">
+                            <label for="input_text">Nombre para dedicatoria</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="addreInocentes" id="input_text" type="text" data-length="10" required=""
+                                aria-required="true" class="formInput">
+                            <label for="input_text">Dirección de entrega</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label>
+                            <input type="checkbox" required="" aria-required="true" />
+                            <span>Acepto <a href="/privacidad">aviso de privacidad</a></span>
+                        </label>
+                    </div>
+                    <button class="btn waves-effect waves-light #212121 grey darken-4">Enviar
+                        <i class="material-icons right" style="color: white !important;">send</i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</div>
