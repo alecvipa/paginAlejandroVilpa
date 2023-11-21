@@ -1,0 +1,213 @@
+<div class="recetasDiv">
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!" class="black-text">Libros</a></li>
+        <li class="divider"></li>
+        <li><a href="#!" class="black-text">Coleccionables</a></li>
+        <li class="divider"></li>
+        <li><a href="#!" class="black-text">Regalos</a></li>
+        <li class="divider"></li>
+    </ul>
+    <nav class="white navDiv fonts" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo"><img src="/assets/images/logo1.png" alt="logoIdm"
+                    class="imageLogo"></a>
+            <ul class="right hide-on-med-and-down navUl">
+                <li><a href="/" class="navItems navBarD">Home</a></li>
+                <li><a href="/aboutme" class="navItems navBarD">My story</a></li>
+                <li><a href="/store" class="navItems navBarD">Store</a></li>
+                <li><a href="/club" class="navItems navBarD">Club</a></li>
+                <li><a href="/contacto" class="navItems navBarD">Contact</a></li>
+                <li><a href="/privacidad" class="navItems navBarD">Privacy policy</a></li>
+                <li><a href="https://web.facebook.com/alejandrovilpa?_rdc=1&_rdr" class="navItems" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/alejandrovilpa/?hl=es" class="navItems" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                {{!-- <li><a href="/privacidad" class="navItems"><i class="fab fa-whatsapp-square"></i></a></li> --}}
+            </ul>
+
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a class="sidenav-close" href="#!"><i class="material-icons" style="color: black;">menu</i></a>
+                </li>
+                <li><a href="/" class="navItems navBarD">Home</a></li>
+                <li><a href="/aboutme" class="navItems navBarD">My story</a></li>
+                <li><a href="/store" class="navItems navBarD">Store</a></li>
+                <li><a href="/club" class="navItems navBarD">Club</a></li>
+                <li><a href="/contacto" class="navItems navBarD">Contact</a></li>
+                <li><a href="/privacidad" class="navItems navBarD">Privacy Policy</a></li>
+                <li><a href="https://web.facebook.com/alejandrovilpa?_rdc=1&_rdr" class="navItems" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/alejandrovilpa/?hl=es" class="navItems" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                {{!-- <li><a href="/privacidad" class="navItems"><i class="fab fa-whatsapp-square"></i></a></li> --}}
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <br><br>
+    <div class="carrouselDiv">
+        <div class="titleVarietales container center-align">
+            <a href="/contact" class="waves-effect waves-light btn">Place a bulk order</a>
+
+        </div>
+        <!-- Gallery -->
+        <div id="portfolio" class="section gray">
+            <div class="container">
+                <div class="gallery row">
+                    <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter polygon">
+                        <div class="gallery-curve-wrapper">
+                            <a class="gallery-cover gray">
+                                <img class="responsive-img" src="/assets/images/portadaLVRS.jpg" alt="placeholder">
+                            </a>
+                            <div class="gallery-header">
+                                <span>La otra vida de Rebecca Smirnov</span> <br>
+                                <span class="price">$14.00</span>
+                            </div>
+                            <div class="gallery-body gallery-bodies">
+                                <div class="title-wrapper">
+                                    <h3>La otra vida de Rebecca Smirnov</h3>
+                                    <span class="price" style="color: black;">$14.00</span> <br>
+                                    <span class="price">Shipping: $5.00 </span>
+                                </div>
+                                <p class="description">
+                                    Death penalty is a posibility for Alejandro and Héctor, who are expecting for the
+                                    judge's sentence for a crime they did not commit. The "women killers" case has been
+                                    opened again. Its just then that they decide to escape from the asylum where they
+                                    are being kept. <br>
+                                    When touching the real world, they face with all kind of crazy characters, which
+                                    remind us of the cruelty of human condition. In a tense atmosphere, adrenaline will
+                                    bring up to the surface burried in the past, about a life full of passion and
+                                    treason. They will face an unknown enemy, who lies in the dark of: The Afterlife of
+                                    Rebecca Sminov.</p>
+                                <a href="https://books.google.com.mx/books/about/La_otra_vida_de_Rebecca_Smirnov.html?id=yxv9DwAAQBAJ&printsec=frontcover&source=kp_read_button&hl=es-419&redir_esc=y#v=onepage&q&f=false"
+                                    class="waves-effect waves-light btn #b71c1c red darken-4"
+                                    target="_blank">Preview</a>
+                                <br> <br>
+                                {{!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="LFA7WPGKZR5QW">
+                                    <input type="image"
+                                        src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif"
+                                        border="0" name="submit"
+                                        alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif"
+                                        width="1" height="1">
+                                </form> --}}
+                                <form action="/create-checkout-session" method="POST">
+                                    <button type="submit" id="checkout-button"
+                                        class="btn btn-primary btn-rounded btn-lg">Buy</button>
+                                </form>
+
+
+                                <div class="carousel-wrapper">
+                                    <div class="carousel">
+                                        <a class="carousel-item" href="#one!"><img src="/assets/images/lvrs2.jpg"></a>
+                                        <a class="carousel-item" href="#two!"><img src="/assets/images/lvrs3.jpg"></a>
+                                        <a class="carousel-item" href="#three!"><img src="/assets/images/lvrs4.jpg"></a>
+                                        <a class="carousel-item" href="#four!"><img src="/assets/images/lvrs5.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-action">
+                                <a class="btn-floating btn-large waves-effect waves-light"><i
+                                        class="material-icons">favorite</i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l4  gallery-item gallery-expand gallery-filter polygon">
+
+
+                    </div>
+
+                    <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter polygon">
+                        <div class="gallery-curve-wrapper">
+                            <a class="gallery-cover gray">
+                                <img class="responsive-img" src="/assets/images/proximamente.jpg" alt="placeholder">
+                            </a>
+                            <div class="gallery-header">
+                                <span>The breath of the innocents</span> <br>
+                                <span class="price">$18.00 </span>
+                            </div>
+                            <div class="gallery-body gallery-bodies">
+                                <div class="title-wrapper">
+                                    <h3>The breath of the innocents</h3>
+                                    <span class="price" style="color: black;">$18.00</span> <br>
+                                    <span class="price">Shipping: $0.00 </span>
+                                </div>
+                                <p class="description">
+                                    «The human race is so naive that it sickens me. Always expecting their backsides to
+                                    fall on padding, always thinking about how to gain an advantage over others; but
+                                    seldom do they do it in an intelligent way». <br>
+
+                                    A wave of femicides hits the city of Mexico. After a night of alcohol, the writer
+                                    Francisco Rojas immerses us in a series of dark events, which remain blurry in his
+                                    memory. As he battles his alcoholism, he discovers his homosexuality in the company
+                                    of a submissive young writer, representing an increasingly violent relationship.
+                                    Together, they unravel the cruel secrets of a psychopath that no one knows and a
+                                    crime that no one has solved.</p>
+                                <a href="https://books.google.com.mx/books?id=nFSWEAAAQBAJ&printsec=frontcover&dq=el+aliento+de+los+inocentes&hl=es-419&sa=X&redir_esc=y#v=onepage&q=el%20aliento%20de%20los%20inocentes&f=false"
+                                    class="waves-effect waves-light btn #b71c1c red darken-4"
+                                    target="_blank">Preview</a>
+                                <br> <br>
+                                <form action="/create-checkout-session-inocentes" method="POST">
+                                    <button type="submit" id="checkout-button"
+                                        class="btn btn-primary btn-rounded btn-lg">Buy</button>
+                                </form>
+
+
+                                <div class="carousel-wrapper">
+                                    <div class="carousel">
+                                        <a class="carousel-item" href="#one!"><img src="/assets/images/lvrs2.jpg"></a>
+                                        <a class="carousel-item" href="#two!"><img src="/assets/images/lvrs3.jpg"></a>
+                                        <a class="carousel-item" href="#three!"><img src="/assets/images/lvrs4.jpg"></a>
+                                        <a class="carousel-item" href="#four!"><img src="/assets/images/lvrs5.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-action">
+                                <a class="btn-floating btn-large waves-effect waves-light"><i
+                                        class="material-icons">favorite</i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </div><!-- /.container -->
+
+    </div>
+</div>
+<footer class="page-footer #424242 grey darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Alejandro Vilpa</h5>
+                <p class="white-text text-lighten-4">—Thriller novel writer.
+                </p>
+
+
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text navBarD">Site map</h5>
+                <ul>
+                    <li><a href="/" class="white-text navBarD">Home</a></li>
+                    <li><a href="/store" class="white-text navBarD">Store</a></li>
+                    <li><a href="/club" class="white-text navBarD">Club</a></li>
+                    <li><a href="/privacidad" class="white-text navBarD">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright #616161 grey darken-2">
+        <div class="container centered">
+            Copyright © <a href="/" style="color: lightgrey;">2022 Alejandro Vilpa - All rights reserved.</a>
+        </div>
+    </div>
+</footer>
