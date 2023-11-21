@@ -5,7 +5,9 @@
             <div class="col l6 m6 s12">
                 <ul class="collection with-header">
                     <li class="collection-header center-align">
-                        <h4>¡Gracias por tu pedido!</h4><hr><h5>El Aliento de los Inocentes</h5>
+                        <h4>¡Gracias por tu pedido!</h4>
+                        <hr>
+                        <h5>El Aliento de los Inocentes</h5>
                     </li>
                     <hr>
                     <li class="collection-header center-align">
@@ -16,7 +18,8 @@
                 </ul>
             </div>
             <div class="col l6 m6 s12">
-                <form class="col s12" action="/inocentesenvio" method="POST" onsubmit="return submitInocentesForm(this);">
+                <form class="col s12" action="/inocentesenvio" method="POST"
+                    onsubmit="return submitInocentesForm(this);">
                     <div class="row">
                         <div class="input-field col s6">
                             <input name="nameInocentes" placeholder="Nombre" id="first_name" type="text"
@@ -35,7 +38,7 @@
                                 aria-required="true" class="formInput">
                             <label for="input_text">País de residencia</label>
                         </div>
-                         <div class="input-field col s6">
+                        <div class="input-field col s6">
                             <input name="zipInocentes" id="input_text" type="text" data-length="10" required=""
                                 aria-required="true" class="formInput">
                             <label for="input_text">Código postal</label>
@@ -47,11 +50,11 @@
                                 aria-required="true" class="formInput">
                             <label for="input_text">Número de contacto</label>
                         </div>
-                        
+
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input name="dedicaInocentes" id="input_text" type="text" data-length="10" 
+                            <input name="dedicaInocentes" id="input_text" type="text" data-length="10"
                                 aria-required="true" class="formInput">
                             <label for="input_text">Nombre para dedicatoria</label>
                         </div>
@@ -80,3 +83,30 @@
     </div>
     <br><br><br>
 </div>
+<footer class="page-footer #424242 grey darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Alejandro Vilpa</h5>
+                <p class="white-text text-lighten-4">—Thriller novel writer.
+                </p>
+
+
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text navBarD">Site map</h5>
+                <ul>
+                    <li><a href="/" class="white-text navBarD">Home</a></li>
+                    <li><a href="/tienda" class="white-text navBarD">Store</a></li>
+                    <li><a href="/club" class="white-text navBarD">Club</a></li>
+                    <li><a href="/privacidad" class="white-text navBarD">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright #616161 grey darken-2">
+        <div class="container centered">
+            Copyright © <a href="/" style="color: lightgrey;">2022 Alejandro Vilpa - All rights reserved.</a>
+        </div>
+    </div>
+</footer>

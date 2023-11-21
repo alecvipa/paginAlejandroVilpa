@@ -42,6 +42,29 @@ app.get('/:params?', function (req, res) {
     res.render(params);
 })
 
+// Rutas en español
+
+app.get('/es', function (req, res) {
+
+    res.render('es')
+
+});
+
+// Routes in english
+
+app.get('/home', function (req, res) {
+
+    res.render('home')
+
+});
+
+// Routes en français
+
+app.get('/accueil', function (req, res) {
+
+    res.render('accueil')
+
+});
 
 
 // Nodemailer route
