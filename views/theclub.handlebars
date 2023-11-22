@@ -1,4 +1,4 @@
-<div class="historia">
+<div class="clubDiv">
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
         <li><a href="#!" class="black-text">Libros</a></li>
@@ -46,83 +46,100 @@
         </div>
     </nav>
     <div class="container">
-        <div class="row">
-            <h4 style="color: #b71c1c;">Writer since the age of 14</h4>
-            <p>I decided to write my first story in my adolescence; it was a fantasy. However, I quickly developed an
-                interest in the crime novel genre. The idea of capturing raw and intricate themes such as human nature
-                and the darkness it can fall into fascinated me. <span style="color: #b71c1c;">The noir genre </span>
-                helped me convey these themes in a more discernible manner. I always had faith that people reading my
-                stories would find some point of identification, as I incorporate personal experiences into them... my
-                story could also be yours.</p>
+        <div class="row t">
+            <h1>
+                —Join the club.
+            </h1>
         </div>
+        <div class="row">
+            <div class="col l6 m6 s12">
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h4>Benefits:</h4>
+                    </li>
+                    <li class="collection-item">
+                        <div>Exclusive discounts</div>
+                    </li>
+                    <li class="collection-item">
+                        <div>Reading my work before anybody else</div>
+                    </li>
+                    <li class="collection-item">
+                        <div>Priority for give aways</div>
+                    </li>
+                    <li class="collection-item">
+                        <div>¿Are you an artist?, let's do something together!</div>
+                    </li>
+                </ul>
+            </div>
 
+        </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col l6 m6 s12">
-                <img class="materialboxed responsive-img" src="/assets/images/carr2.jpg">
 
-            </div>
-            <div class="col l6 m6 s12 margin-top-7">
-                <img class="materialboxed responsive-img" src="/assets/images/carr4.jpg">
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col l6 m6 s12">
-                <img class="materialboxed responsive-img" src="/assets/images/carr5.jpg">
-
-            </div>
-            <div class="col l6 m6 s12 margin-top-7">
-                <img class="materialboxed responsive-img" src="/assets/images/carr6.jpg">
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col l6 m6 s12">
-                <img class="materialboxed responsive-img" src="/assets/images/carr8.jpg">
-
-            </div>
-            <div class="col l6 m6 s12 margin-top-7">
-                <img class="materialboxed responsive-img" src="/assets/images/carr9.jpg">
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col l6 m6 s12">
-                <img class="materialboxed responsive-img" src="/assets/images/carr10.jpg">
-
-            </div>
-            <div class="col l6 m6 s12 margin-top-7">
-                <img class="materialboxed responsive-img" src="/assets/images/carr11.jpg">
-
-            </div>
-
-        </div>
-        <div class="row">
+    <div class="contactoDiv"> <br>
+        <div class="container titleSiguenos">
             <div class="row">
-                <div class="col l6 m6 s12">
-                    <img class="materialboxed responsive-img" src="/assets/images/carr12.jpg">
 
-                </div>
-                <div class="col l6 m6 s12 margin-top-7">
-                    <img class="materialboxed responsive-img" src="/assets/images/carr13.jpg">
+                <h3>Be part of this community.</h3>
+                <p style="font-style: italic; font-size: 1.5rem">Share with me your passion for books...
+                </p>
 
-                </div>
             </div>
-        </div>
-        <div class="row">
             <div class="row">
-                <div class="col l6 m6 s12">
-                    <img class="materialboxed responsive-img" src="/assets/images/carr14.jpg">
+                <form class="col s12" action="/club/email" method="POST" onsubmit="return submitClubForm(this);">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input name="nameClub" placeholder="Nombre" id="first_name" type="text"
+                                class="validate formInput" required="" aria-required="true">
+                            <label for="first_name">Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input name="emailClub" id="email" type="text" class="validate formInput" required=""
+                                aria-required="true">
+                            <label for="email">e-mail</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="countryClub" id="input_text" type="text" data-length="10" required=""
+                                aria-required="true" class="formInput">
+                            <label for="input_text">Country of residence</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label>
+                            <input type="checkbox" required="" aria-required="true" />
+                            <span>I agree with the <a href="/privacy">privacy policy</a></span>
+                        </label>
+                    </div>
+                    <button class="btn waves-effect waves-light #212121 grey darken-4">Register
+                        <i class="material-icons right" style="color: white !important;">send</i>
+                    </button>
+                </form>
+            </div>
+        </div> <br>
 
+        <div class="opcionComprar">
+            <div class="container">
+                <div class="row centered titleSiguenos">
+                    <h4>See the top products in my store:</h4>
                 </div>
-                <div class="col l6 m6 s12">
-
-
+                <div class="row">
+                    <div class="col l4 m4 s6">
+                        <img class="responsive-img" src="/assets/images/libroSmirnov.jpg"
+                            onclick="location.href='/store';">
+                    </div>
+                    <div class="col l4 m4 s6">
+                        <img class="responsive-img" src="/assets/images/tazaCuadrada.jpg"
+                            onclick="location.href='/store';">
+                    </div>
+                    <div class="col l4 m4 s6">
+                        <img class="responsive-img" src="/assets/images/proximaCuadrada.jpg"
+                            onclick="location.href='/store';">
+                    </div>
                 </div>
             </div>
         </div>
+        <br>
     </div>
 </div>
 <footer class="page-footer #424242 grey darken-3">
@@ -140,7 +157,7 @@
                 <ul>
                     <li><a href="/" class="white-text navBarD">Home</a></li>
                     <li><a href="/tienda" class="white-text navBarD">Store</a></li>
-                    <li><a href="/theclub" class="white-text navBarD">Club</a></li>
+                    <li><a href="/club" class="white-text navBarD">Club</a></li>
                     <li><a href="/privacy" class="white-text navBarD">Privacy Policy</a></li>
                 </ul>
             </div>
