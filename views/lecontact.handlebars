@@ -1,0 +1,139 @@
+<div class="contactoDiv">
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!" class="black-text">Libros</a></li>
+        <li class="divider"></li>
+        <li><a href="#!" class="black-text">Coleccionables</a></li>
+        <li class="divider"></li>
+        <li><a href="#!" class="black-text">Regalos</a></li>
+        <li class="divider"></li>
+    </ul>
+    <nav class="white navDiv fonts" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo"><img src="/assets/images/logo1.png" alt="logoIdm"
+                    class="imageLogo"></a>
+            <ul class="right hide-on-med-and-down navUl">
+                <li><a href="/accueil" class="navItems navBarD">Accueil</a></li>
+                <li><a href="/monhistoire" class="navItems navBarD">Mon histoire</a></li>
+                <li><a href="/boutique" class="navItems navBarD">Boutique en ligne</a></li>
+                <li><a href="/leclub" class="navItems navBarD">Le club</a></li>
+                <li><a href="/lecontact" class="navItems navBarD">Contact</a></li>
+                <li><a href="/politique" class="navItems navBarD">Politique de Confidentialité</a></li>
+                <li><a href="https://web.facebook.com/alejandrovilpa?_rdc=1&_rdr" class="navItems" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/alejandrovilpa/?hl=es" class="navItems" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                {{!-- <li><a href="/privacidad" class="navItems"><i class="fab fa-whatsapp-square"></i></a></li> --}}
+            </ul>
+
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a class="sidenav-close" href="#!"><i class="material-icons" style="color: black;">menu</i></a>
+                </li>
+                <li><a href="/accueil" class="navItems navBarD">Accueil</a></li>
+                <li><a href="/monhistoire" class="navItems navBarD">Mon histoire</a></li>
+                <li><a href="/boutique" class="navItems navBarD">Boutique en ligne</a></li>
+                <li><a href="/leclub" class="navItems navBarD">Le club</a></li>
+                <li><a href="/lecontact" class="navItems navBarD">Contact</a></li>
+                <li><a href="/politique" class="navItems navBarD">Politique de Confidentialité</a></li>
+                <li><a href="https://web.facebook.com/alejandrovilpa?_rdc=1&_rdr" class="navItems" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/alejandrovilpa/?hl=es" class="navItems" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                {{!-- <li><a href="/privacidad" class="navItems"><i class="fab fa-whatsapp-square"></i></a></li> --}}
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <br>
+    <div class="container centered titleSiguenos">
+        <div class="row">
+
+            <h3>Restons en contact!</h3>
+            <p style="font-style: italic; font-size: 1.5rem">Vous pouvez également me joindre par e-mail:
+                alecvipa@gmail.com
+            </p>
+
+        </div>
+        <div class="row">
+            <form class="col s12" action="/ajax/email" method="POST" onsubmit="return submitEmailForm(this);">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input name="name" placeholder="Nom" id="first_name" type="text" class="validate formInput"
+                            required="" aria-required="true">
+                        <label for="first_name">Nom</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input name="email" id="email" type="text" class="validate formInput" required=""
+                            aria-required="true">
+                        <label for="email">E-mail</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="message" id="input_text" type="text" data-length="10" required=""
+                            aria-required="true" class="formInput">
+                        <label for="input_text">Message</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" required="" aria-required="true" />
+                        <span>J'accepte la <a href="/privacy">politique de confidentialité</a></span>
+                    </label>
+                </div>
+                <button class="btn waves-effect waves-light #212121 grey darken-4">Envoyer
+                    <i class="material-icons right" style="color: white !important;">send</i>
+                </button>
+            </form>
+        </div>
+    </div> <br>
+    <div class="opcionComprar">
+        <div class="container">
+            <div class="row centered titleSiguenos">
+                <h4>Voir les meilleurs produits dans ma boutique:</h4>
+            </div>
+            <div class="row">
+                <div class="col l4 m4 s6">
+                    <img class="responsive-img" src="/assets/images/libroSmirnov.jpg"
+                        onclick="location.href='/tienda';">
+                </div>
+                <div class="col l4 m4 s6">
+                    <img class="responsive-img" src="/assets/images/tazaCuadrada.jpg"
+                        onclick="location.href='/tienda';">
+                </div>
+                <div class="col l4 m4 s6">
+                    <img class="responsive-img" src="/assets/images/proximaCuadrada.jpg"
+                        onclick="location.href='/tienda';">
+                </div>
+            </div>
+        </div>
+    </div> <br>
+</div>
+<footer class="page-footer #424242 grey darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Alejandro Vilpa</h5>
+                <p class="white-text text-lighten-4">—Écrivain de roman policier.
+                </p>
+
+
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text navBarD">Plan du site</h5>
+                <ul>
+                    <li><a href="/accueil" class="white-text navBarD">Accueil</a></li>
+                    <li><a href="/boutique" class="white-text navBarD">Boutique en ligne</a></li>
+                    <li><a href="/leclub" class="white-text navBarD">Le club</a></li>
+                    <li><a href="/politique" class="white-text navBarD">Politique de Confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright #616161 grey darken-2">
+        <div class="container centered">
+            Droits d'auteur © <a href="/" style="color: lightgrey;">2022 Alejandro Vilpa - Tous droits réservés.</a>
+        </div>
+    </div>
+</footer>
